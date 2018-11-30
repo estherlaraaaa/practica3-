@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  .container
+    header
+     h1 Administrador de Tareas 
+     .erros
+    form#new(action="/tarea" method="post" name="saveTarea")
+      .group
+        input#tarea(type="text", name="tarea" required)
+        span.highlight
+        span.bar
+        label(for="tarea") Tarea
+      .group
+        input#descripcion(type="text", name="descripcion" required)
+        span.highlight
+        span.bar
+        label(for="descripcion") Descripcion
+      .group
+        input#propietario(type="text", name="propietario" required)
+        span.highlight
+        span.bar
+        label(for="propietario") Propietario 
+      button.btn(type="submit")
+        span Guardar
+    .table
+      table 
+        thead
+          th Tarea
+          th Descripcion
+          th Propietario 
+          th Opciones
+        tbody.tareas 
+  script(src="/javascripts/main.js")
