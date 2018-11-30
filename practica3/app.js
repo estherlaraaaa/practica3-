@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Conectando a la base de datos 
-mongoose.connect("mongodb://<estherlaraaaa>:<Adiosjeje1>@ds157742.mlab.com:57742/practica3", { useNewUrlParser: true })
+mongoose.connect("mongodb://estherlaraaaa:Adiosjeje1@ds157742.mlab.com:57742/practica3", { useNewUrlParser: true })
 .then(()=>{
   console.log("Connection successful!");
 })
